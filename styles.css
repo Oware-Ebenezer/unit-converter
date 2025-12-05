@@ -21,6 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 24px;
+  flex-direction: column;
 }
 
 .container {
@@ -119,6 +120,19 @@ button[title] {
 }
 
 li {
-    list-style: none;
-    margin-bottom: 12px;
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+footer {
+  margin-top: 2rem;
+  font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: var(--muted);
+}
+a:hover {
+    text-decoration: underline;
 }
