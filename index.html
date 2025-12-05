@@ -20,7 +20,7 @@
   <body>
     <main class="container">
       <h1>Unit Converter</h1>
-      <p>
+      <p class="moredecs">
         Convert between pixels, feet and inches
         <span class="more">more unit conversion to be added soon</span>
       </p>
@@ -42,7 +42,7 @@
           <option value="in">inches</option>
           <option value="feet">feet</option>
         </select>
-        <label for="to">From</label>
+        <label for="to">To</label>
         <select name="to" id="to">
           <option value="px">pixels</option>
           <option value="in">inches</option>
@@ -61,17 +61,18 @@
         </div>
         <div id="result" aria-live="polite"></div>
       </form>
+      <section class="notes">
+        <h2>Notes</h2>
+        <ul>
+          <li>1 foot = 12 inches</li>
+          <li>px = inches × PPI → inches = px/PPI</li>
+          <li>
+            Default PPI is 96, but input the real PPI for accurate physical
+            size.
+          </li>
+        </ul>
+      </section>
     </main>
-    <section class="notes">
-      <h2>Notes</h2>
-      <ul>
-        <li>1 foot = 12 inches</li>
-        <li>px = inches × PPI → inches = px/PPI</li>
-        <li>
-          Default PPI is 96, but input the real PPI for accurate physical size.
-        </li>
-      </ul>
-    </section>
     <script src="script.js"></script>
   </body>
 </html>
