@@ -60,12 +60,12 @@ function formatResult(inputValue, from, outputValue, to, ppi) {
   const rounded = roundSmart(outputValue);
 
   if (from === "px" || to === "px") {
-    return `${inputValue} ${lable(from)} = ${rounded} ${lable(
+    return `${inputValue} ${label(from)} = ${rounded} ${label(
       to
     )} (PPI=${ppi})`;
   }
 
-  return `${inputValue} ${lable(from)} ${rounded} ${lable(to)}`;
+  return `${inputValue} ${label(from)} ${rounded} ${label(to)}`;
 }
 
 function label(unit) {
