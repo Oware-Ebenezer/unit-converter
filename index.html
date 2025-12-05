@@ -4,11 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unit Converter</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://icon-library.com/images/icon-convert/icon-convert-12.jpg"
+      type="image/x-icon"
+    />
   </head>
   <body>
+    <main class="container">
+      <h1>Unit Converter</h1>
+      <p>
+        Convert between pixels, feet and inches
+        <span class="more">more unit conversion to be added soon</span>
+      </p>
 
+      <form id="converter" aria-describedby="converter">
+        <p class="desc">Enter a value, choose units</p>
+        <label for="value">Value</label>
+        <input
+          id="value"
+          type="number"
+          name="value"
+          inputmode="decimal"
+          step="any"
+          required
+        />
+        <label for="from">From</label>
+        <select name="from" id="from">
+          <option value="px">pixels</option>
+          <option value="in">inches</option>
+          <option value="feet">feet</option>
+        </select>
+        <label for="to">From</label>
+        <select name="to" id="to">
+          <option value="px">pixels</option>
+          <option value="in">inches</option>
+          <option value="ft">feet</option>
+        </select>
 
+        <label for="ppi">PPI (pixels per inch)</label>
+        <input id="ppi" name="ppi" type="number" step="any" value="96" />
+
+        <div class="actions">
+          <button id="convertBtn" type="button">Convert</button>
+          <button id="swapBtn" type="button" title="Swap from & to">
+            Swap
+          </button>
+          <button id="clearBtn" type="button">Clear</button>
+        </div>
+        <div id="result" aria-live="polite"></div>
+      </form>
+    </main>
+    <section class="notes">
+      <h2>Notes</h2>
+      <ul>
+        <li>1 foot = 12 inches</li>
+        <li>px = inches × PPI → inches = px/PPI</li>
+        <li>
+          Default PPI is 96, but input the real PPI for accurate physical size.
+        </li>
+      </ul>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
